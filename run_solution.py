@@ -4,7 +4,9 @@
 
 import argparse
 import importlib
+import logging
 import os
+import sys
 
 def read_input(filename: str) -> list:
     '''
@@ -99,7 +101,27 @@ def _process_arguments() -> argparse.Namespace:
 
 if __name__ == '__main__':
 
+    # Process program arguments
+
     args = _process_arguments()
+
+    # Initialize the logging system
+
+    logging_level = logging.INFO
+    if args.debug:
+        logging_level = logging.DEBUG
+
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setLevel(logging_level)
+    formatter = logging.Formatter('%(message)s')
+    handler.setFormatter(formatter)
+
+    root_logger = logging.getLogger()
+    root_logger.addHandler(handler)
+    root_logger.setLevel(logging_level)
+
+    # Execute the main method!
+
     main(args.day, args.puzzle, args.test, args.debug)
 
 ################################################################################
