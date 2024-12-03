@@ -2,6 +2,10 @@
 # solution_00_0.template
 ################################################################################
 
+import logging
+
+log = logging.getLogger('solution')
+
 def solve(input_filename: str, input_data: list, use_debug: bool) -> str:
     pass
 
