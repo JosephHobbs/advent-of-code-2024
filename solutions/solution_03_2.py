@@ -7,7 +7,7 @@ import re
 
 log = logging.getLogger('solution')
 
-def solve(input_filename: str, input_data: list, use_debug: bool):
+def solve(input_filename: str, input_data: list, use_debug: bool) -> str:
 
     # Create one big string using the provided input data.
 
@@ -48,7 +48,7 @@ def solve(input_filename: str, input_data: list, use_debug: bool):
             else:
                 log.debug('disabled, ignoring mul operation')
 
-    print(result)
+    return result
 
 ################################################################################
 # END

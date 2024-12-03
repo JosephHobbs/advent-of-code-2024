@@ -7,7 +7,7 @@ import re
 
 log = logging.getLogger('solution')
 
-def solve(input_filename: str, input_data: list, use_debug: bool):
+def solve(input_filename: str, input_data: list, use_debug: bool) -> str:
 
     # Create one big string using the provided input data.
 
@@ -36,7 +36,7 @@ def solve(input_filename: str, input_data: list, use_debug: bool):
         log.debug('found operation data: %d : %d', value0, value1)
         result += (value0 * value1)
 
-    print(result)
+    return result
 
 ################################################################################
 # END

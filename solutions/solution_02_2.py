@@ -82,7 +82,7 @@ class ReactorReporter:
 #
 #
 
-def solve(input_filename: str, input_data: list, use_debug: bool):
+def solve(input_filename: str, input_data: list, use_debug: bool) -> str:
 
     result = 0
     for input_line in input_data:
@@ -96,7 +96,7 @@ def solve(input_filename: str, input_data: list, use_debug: bool):
         if ReactorReporter.is_safe(values, True) == True:
             result += 1
 
-    print(result)
+    return result
 
 ################################################################################
 # END

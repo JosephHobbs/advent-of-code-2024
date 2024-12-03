@@ -2,7 +2,7 @@
 # solution_01_1.py
 ################################################################################
 
-def solve(input_filename: str, input_data: list, use_debug: bool):
+def solve(input_filename: str, input_data: list, use_debug: bool) -> str:
 
     # Initlaize two lists; one for each column.  Fill them and then sort
     # each list individually so values are in order.
@@ -25,7 +25,7 @@ def solve(input_filename: str, input_data: list, use_debug: bool):
     for i in range(len(list1)):
         result += abs(list1[i] - list2[i])
 
-    print(result)
+    return result
 
 ################################################################################
 # END

@@ -60,9 +60,12 @@ def main(aoc_day: int, aoc_puzzle: int, use_test: bool, use_debug: bool):
         print(f'unable to load solution module: {e}')
         exit(3)
 
-    # Read in the contents of the input file and run the solution.
+    # Read in the contents of the input file and run the solution. Return the
+    # results to the user.
 
-    solution.solve(input_filename, read_input(input_filename), use_debug)
+    result = solution.solve(input_filename, read_input(input_filename), use_debug)
+
+    print(f'Result: {result}')
 
 #
 # Process arguments and execute main() with the required arguments.

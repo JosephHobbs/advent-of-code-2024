@@ -2,8 +2,8 @@
 # solution_00_0.template
 ################################################################################
 
-def solve(input_filename: str, input_data: list, use_debug: bool):
-    pass    
+def solve(input_filename: str, input_data: list, use_debug: bool) -> str:
+    pass
 
 ################################################################################
 # END

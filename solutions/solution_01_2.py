@@ -2,7 +2,7 @@
 # solution_01_2.py
 ################################################################################
 
-def solve(input_filename: str, input_data: list, use_debug: bool):
+def solve(input_filename: str, input_data: list, use_debug: bool) -> str:
 
     # Initlaize two lists and fill them based on the values in each column.
 
@@ -23,7 +23,7 @@ def solve(input_filename: str, input_data: list, use_debug: bool):
         hits = list2.count(i)
         result += (i * hits)
 
-    print(result)
+    return result
 
 ################################################################################
 # END
