@@ -7,6 +7,7 @@ import importlib
 import logging
 import os
 import sys
+import time
 
 def read_input(filename: str) -> list:
     '''
@@ -63,9 +64,12 @@ def main(aoc_day: int, aoc_puzzle: int, use_test: bool, use_debug: bool):
     # Read in the contents of the input file and run the solution. Return the
     # results to the user.
 
+    start_time = time.time()
     result = solution.solve(input_filename, read_input(input_filename), use_debug)
+    end_time = time.time()
 
     print(f'Result: {result}')
+    print(f'Elapsed: {str(end_time - start_time)} secs')
 
 #
 # Process arguments and execute main() with the required arguments.
