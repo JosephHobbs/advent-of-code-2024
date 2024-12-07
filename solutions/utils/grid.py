@@ -80,7 +80,11 @@ class Grid:
             target_x = x + position.x_offset
             target_y = y + position.y_offset
 
-            if (target_y < len(self.data)) and (target_x < len(self.data[target_y])):
+            if (target_y < len(self.data)) \
+                and (target_y >= 0) \
+                and (target_x < len(self.data[target_y])) \
+                and (target_x >= 0):
+                
                 coord_data[position.index] = self.data[target_y][target_x]
         
         return coord_data
