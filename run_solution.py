@@ -69,7 +69,7 @@ def main(aoc_day: int, aoc_puzzle: int, use_test: bool, use_debug: bool):
     end_time = time.time()
 
     print(f'Result: {result}')
-    print(f'Elapsed: {str(end_time - start_time)} secs')
+    print(f'Elapsed: {(end_time - start_time):.9f} secs')
 
 #
 # Process arguments and execute main() with the required arguments.
