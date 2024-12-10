@@ -44,8 +44,15 @@ class Coordinate:
         self.y = y
         self._values = values
 
+    def get_value_int(self, position: Position) -> int:
+        value = self._values[position.index]
+        if value:
+            return int(value)
+        else:
+            return None
+
     def get_value_str(self, position: Position) -> str:
-        value = self._values[position]
+        value = self._values[position.index]
         if value:
             return str(value)
         else:
